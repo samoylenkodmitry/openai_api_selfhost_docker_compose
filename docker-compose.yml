@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  code_review_app:
+    image: code_review_app
+    container_name: code_review_app
+    restart: always
+    networks: ["net"]
+    expose:
+       - "5000"
+    ports:
+       - "80:5000"
+    environment:
+      VIRTUAL_HOST: "YOUR_URL_HERE"
+      LETSENCRYPT_HOST: "YOUR_URL_HERE"
+      LETSENCRYPT_EMAIL: "YOUR_EMAIL_FOR_LETSENCRYPT"
+      OVERWRITEPROTOCOL: "https"
+networks:
+  net:
+    external: true
