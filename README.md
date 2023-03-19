@@ -1,7 +1,7 @@
 # OpenAI API selfhosted with docker and docker-compose
 This will allow you to host your own OpenAI API endpoint with predefined message
 # Is it free?
-You must obtain OpenAI API token first.
+You must obtain [OpenAI API token](https://platform.openai.com/account/api-keys) first.
 # Setup
 ## Define token and message
 ```
