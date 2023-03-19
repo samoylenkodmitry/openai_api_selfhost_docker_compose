@@ -4,6 +4,7 @@ This will allow you to host your own OpenAI API endpoint with predefined message
 You must obtain [OpenAI API token](https://platform.openai.com/account/api-keys) first.
 # Setup
 ## Define token and message
+By default message asks to do code or git diff review.
 ```
 git clone 
 vim app.py # define `api_key` and change `messages`
