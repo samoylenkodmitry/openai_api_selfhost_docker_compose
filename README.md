@@ -17,17 +17,15 @@ docker build -t code_review_app .
 This config uses docker shared network from another docker-compose.yml nginx reverse-proxy image.
 ```
 vim docker-compose.yml # change `VIRTUAL_HOST`, `LETSENCRYPT_HOST`, `LETSENCRYPT_EMAIL`
-vim DEFAULT_EMAIL # Edit lentsencrypt `DEFAULT_EMAIL`
+docker-compose up -d
 ```
 Start nginx reverse-proxy if you not have one:
 ```
 cd nginx
+vim docker-compose.yml # Edit lentsencrypt `DEFAULT_EMAIL`
 docker-compose up -d
 ```
-Come back and start enpoint docker:
-```
-docker-compose up -d
-```
+
 # Usage
 ```
 curl -X POST -F "code_text=import os
